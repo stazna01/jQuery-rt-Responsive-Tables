@@ -10,14 +10,14 @@ This plugin has been tested and works with modern versions of Chrome, Firefox, S
 
 Include the plugin script and style file.
 
-'''html
+```html
 <link rel="stylesheet" href="jquery.rtResponsiveTables.min.css">
 <script src="jquery.rtResponsiveTables.min.js" type="text/javascript"></script>
-'''
+```
 
 ###Example Usage
 
-'''html
+```html
 <table>
 	<thead>
 	<tr>
@@ -52,7 +52,7 @@ Include the plugin script and style file.
 <script type="text/javascript">
 $("table").rtResponsiveTables();
 </script>
-'''
+```
 
 ## Options
 
@@ -64,10 +64,10 @@ There may be times when you want a table to become vertical even though it still
 
 ###Example Usage
 
-'''html
+```html
 <script type="text/javascript">
 $("table#nintendoTable").rtResponsiveTables({
 	containerBreakPoint: 1000
 	});
 </script>
-'''
+```
