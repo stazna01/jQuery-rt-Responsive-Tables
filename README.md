@@ -66,8 +66,8 @@ There may be times when you want a table to become vertical even though it still
 
 ```html
 <script type="text/javascript">
-$("table#nintendoTable").rtResponsiveTables({
-	containerBreakPoint: 1000
+$("table#dunderMifflinTable").rtResponsiveTables({
+	containerBreakPoint: 300
 	});
 </script>
 ```
