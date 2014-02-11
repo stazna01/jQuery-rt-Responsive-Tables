@@ -1,7 +1,7 @@
 {
 "name": "rtResponsiveTables",
 "title": "jQuery rt Responsive Tables",
-"description": "jQuery plugin for making tables responsive dynamically.",
+"description": "This is a jQuery plugin for making tables responsive dynamically.",
 "keywords": [
 "responsive",
 "tables"
