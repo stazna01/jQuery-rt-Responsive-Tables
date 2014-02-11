@@ -1,0 +1,33 @@
+{
+"name": "rtResponsiveTables",
+"title": "jQuery rt Responsive Tables",
+"description": "jQuery plugin for making tables responsive dynamically.",
+"keywords": [
+"responsive",
+"tables"
+],
+"version": "1.0.0",
+"author": {
+"name": "Nathan Stazewski",
+"url": "https://github.com/stazna01/"
+},
+"maintainers": [
+{
+"name": "Nathan Stazewski",
+"url": "https://github.com/stazna01/"
+}
+],
+"licenses": [
+{
+"type": "MIT",
+"url": "http://opensource.org/licenses/MIT"
+}
+],
+"bugs": "https://github.com/stazna01/jQuery-rt-Responsive-Tables/issues",
+"homepage": "https://github.com/stazna01/jQuery-rt-Responsive-Tables",
+"docs": "https://github.com/stazna01/jQuery-rt-Responsive-Tables",
+"download": "https://github.com/stazna01/jQuery-rt-Responsive-Tables/archive/master.zip",
+"dependencies": {
+"jquery": ">=1.5"
+}
+}
