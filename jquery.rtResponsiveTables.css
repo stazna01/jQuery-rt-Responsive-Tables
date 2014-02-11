@@ -1,0 +1,68 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table.rt-responsive-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+table.rt-responsive-table tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+table.rt-responsive-table th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+table.rt-responsive-table td, table.rt-responsive-table th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+
+
+/* Force table to not be like tables anymore */
+table.rt-responsive-table.rt-vertical-table, table.rt-responsive-table.rt-vertical-table thead, table.rt-responsive-table.rt-vertical-table tbody, table.rt-responsive-table.rt-vertical-table th, table.rt-responsive-table.rt-vertical-table td, table.rt-responsive-table.rt-vertical-table tr { 
+	display: block;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* BELOW THREE STATEMENTS NEEDED FOR IE9 AND BELOW */
+	float:left;
+	clear:left;
+	width: 100%;
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+table.rt-responsive-table.rt-vertical-table thead tr { 
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+table.rt-responsive-table.rt-vertical-table tr { border: 1px solid #ccc; }
+
+table.rt-responsive-table.rt-vertical-table td { 
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #eee; 
+	position: relative;
+	padding-left: 50%; 
+}
+
+table.rt-responsive-table.rt-vertical-table td:before { 
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	top: 6px;
+	left: 6px;
+	width: 45%; 
+	padding-right: 10px; 
+	white-space: nowrap;
+	font-weight: bold;
+}
