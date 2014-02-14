@@ -1,4 +1,4 @@
-/* jQuery rt Responsive Tables - v1.0.0 - 2014-02-10
+/* jQuery rt Responsive Tables - v1.0.1 - 2014-02-14
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
@@ -48,22 +48,29 @@ $.fn.rtResponsiveTables = function( options ) {
 				rt_current_width = determine_table_width($(this))-1;  //this "-1" seems to fix an issue in firefox without harming any other browsers
 				rt_max_width = $(this).attr('data-rt-max-width');
 				rt_has_class_rt_vertical_table = $(this).hasClass('rt-vertical-table');
-				if (rt_containers_width < rt_current_width || rt_containers_width <= settings.containerBreakPoint) { //the parent element is less than the current width of the table or the parent element is less than or equal to a user supplied breakpoint
+				
+				if ($(this).attr("data-rtContainerBreakPoint")) {
+					rt_user_defined_container_breakpoint = $(this).attr("data-rtContainerBreakPoint");
+					} else {
+						rt_user_defined_container_breakpoint = settings.containerBreakPoint;
+						}
+				
+				if (rt_containers_width < rt_current_width || rt_containers_width <= rt_user_defined_container_breakpoint) { //the parent element is less than the current width of the table or the parent element is less than or equal to a user supplied breakpoint
 					$(this).addClass('rt-vertical-table'); //switch to vertical orientation (or at least keep it that orientation)
 					
-					if(rt_max_width > rt_current_width && rt_max_width > settings.containerBreakPoint) { //the max width was set too high and needs to be adjusted to this lower number
+					if(rt_max_width > rt_current_width && rt_max_width > rt_user_defined_container_breakpoint) { //the max width was set too high and needs to be adjusted to this lower number
 							$(this).attr('data-rt-max-width', rt_current_width);
-							} else if (rt_max_width > rt_current_width && rt_max_width <= settings.containerBreakPoint) { //same as above but in this case the breakpoint is larger or equal so it needs to be set as the max width
-								$(this).attr('data-rt-max-width', settings.containerBreakPoint);
+							} else if (rt_max_width > rt_current_width && rt_max_width <= rt_user_defined_container_breakpoint) { //same as above but in this case the breakpoint is larger or equal so it needs to be set as the max width
+								$(this).attr('data-rt-max-width', rt_user_defined_container_breakpoint);
 								}
 							
-					} else if (rt_containers_width > rt_max_width && rt_containers_width > settings.containerBreakPoint) { //the parent element is bigger than the max width and user supplied breakpoint
+					} else if (rt_containers_width > rt_max_width && rt_containers_width > rt_user_defined_container_breakpoint) { //the parent element is bigger than the max width and user supplied breakpoint
 						$(this).removeClass('rt-vertical-table');  //switch to horizontal orientation (or at least keep it that orientation)
 						
-						if((rt_max_width > rt_current_width && !rt_has_class_rt_vertical_table) && (rt_max_width > settings.containerBreakPoint && !rt_has_class_rt_vertical_table)) { //max width is greater than the table's current width and it's in horizontal mode currently...so the max width was set to low and needs to be adjusted to a higher number
+						if((rt_max_width > rt_current_width && !rt_has_class_rt_vertical_table) && (rt_max_width > rt_user_defined_container_breakpoint && !rt_has_class_rt_vertical_table)) { //max width is greater than the table's current width and it's in horizontal mode currently...so the max width was set to low and needs to be adjusted to a higher number
 							$(this).attr('data-rt-max-width', rt_current_width);
-							} else if((rt_max_width > rt_current_width && !rt_has_class_rt_vertical_table) && (rt_max_width <= settings.containerBreakPoint && !rt_has_class_rt_vertical_table)) { //same as above but in this case the user supplied breakpoint is larger or equal so it needs to be set as the max width
-								$(this).attr('data-rt-max-width', settings.containerBreakPoint);
+							} else if((rt_max_width > rt_current_width && !rt_has_class_rt_vertical_table) && (rt_max_width <= rt_user_defined_container_breakpoint && !rt_has_class_rt_vertical_table)) { //same as above but in this case the user supplied breakpoint is larger or equal so it needs to be set as the max width
+								$(this).attr('data-rt-max-width', rt_user_defined_container_breakpoint);
 								}
 							
 						} else { //equal

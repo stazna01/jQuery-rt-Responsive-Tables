@@ -1,12 +1,12 @@
 {
 "name": "rtResponsiveTables",
 "title": "jQuery rt Responsive Tables",
-"description": "This is a jQuery plugin for making tables responsive dynamically.",
+"description": "This is a jQuery plugin for making tables responsive dynamically. The plugin dynamically detects when the table no longer can fit in its container and then displays it vertically.",
 "keywords": [
 "responsive",
 "tables"
 ],
-"version": "1.0.0",
+"version": "1.0.1",
 "author": {
 "name": "Nathan Stazewski",
 "url": "https://github.com/stazna01/"
