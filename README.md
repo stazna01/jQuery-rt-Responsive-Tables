@@ -84,9 +84,10 @@ This option allows for you to do a one-off table so that you can set the plugin 
 
 ###Example Usage
 
+The first table behaves according to plugin call with no options and then second table has a data attribute which will make it go vertical when its parent reaches 1000 pixels or smaller.
+
 ```html
 
-<!-- first table behaves according to plugin call with no options and then second table has a data attribute which will make it go vertical when its parent reaches 1000 pixels or smaller -->
 
 <table>
 	<thead>
