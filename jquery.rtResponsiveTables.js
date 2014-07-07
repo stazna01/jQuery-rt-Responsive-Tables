@@ -1,4 +1,4 @@
-/* jQuery rt Responsive Tables - v1.0.1 - 2014-02-14
+/* jQuery rt Responsive Tables - v1.0.2 - 2014-07-07
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
@@ -17,7 +17,10 @@ $.fn.rtResponsiveTables = function( options ) {
 	rtStartingOuterWidth = window.outerWidth; //used later to detect orientation change across all mobile browsers (other methods don't always work on Android)
 	is_iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent ); //needed due to the fact that iOS scrolling causes false resizes
 	rt_responsive_table_object = this;
-	
+	function isEmpty( el ){
+		return !$.trim(el.html())
+		}
+		
 	function rt_write_css(rt_class_identifier) {
 		rt_css_code = '<style type="text/css">';
 		$(rt_class_identifier).find('th').each(function(index, element) {
@@ -93,6 +96,11 @@ $.fn.rtResponsiveTables = function( options ) {
 			$('table.rt-responsive-table').each(function(index2, element2) {
 				rt_write_css('table.rt-responsive-table-'+index2);
 				$('table.rt-responsive-table-'+index2).attr('data-rt-max-width', determine_table_width($(this)));
+				$(this).find("td,th").each(function(index3, element3) { //empty td tags made them disappear
+                    if (isEmpty($(this))) {
+						$(this).html("&#160;");
+						}
+                	});
 				if (rt_responsive_table_count - 1 == index2) {
 					fix_responsive_tables();
 					}

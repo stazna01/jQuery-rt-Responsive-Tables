@@ -11,6 +11,7 @@ This plugin has been tested and works with modern versions of Chrome, Firefox, S
 Include the plugin script and style file.
 
 ```html
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <link rel="stylesheet" href="jquery.rtResponsiveTables.min.css">
 <script src="jquery.rtResponsiveTables.min.js" type="text/javascript"></script>
 ```
@@ -66,7 +67,7 @@ There may be times when you want a table to become vertical even though it still
 
 ```html
 <script type="text/javascript">
-$("table#dunderMifflinTable").rtResponsiveTables({
+$("table").rtResponsiveTables({
 	containerBreakPoint: 300
 	});
 </script>
@@ -152,6 +153,6 @@ The first table behaves according to plugin call with no options and then second
 </table>
 
 <script type="text/javascript">
-$("table#dunderMifflinTable").rtResponsiveTables();
+$("table").rtResponsiveTables();
 </script>
 ```
