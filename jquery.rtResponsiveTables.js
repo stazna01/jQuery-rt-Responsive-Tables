@@ -14,7 +14,7 @@ $.fn.rtResponsiveTables = function( options ) {
 		containerBreakPoint: 0 //allows a user to force the vertical mode at a certain pixel width of its container, in the case when a table may technically fit but you'd prefer the vertical mode
 		}, options );
 		
-	rtStartingOuterWidth = window.outerWidth; //used later to detect orientation change across all mobile browsers (other methods don't always work on Android)
+	rtStartingOuterWidth = $(window).width(); //used later to detect orientation change across all mobile browsers (other methods don't always work on Android)
 	is_iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent ); //needed due to the fact that iOS scrolling causes false resizes
 	rt_responsive_table_object = this;
 	function isEmpty( el ){
@@ -87,8 +87,8 @@ $.fn.rtResponsiveTables = function( options ) {
 		$(this).addClass('rt-responsive-table-'+index).addClass('rt-responsive-table');
 		if (index == rt_responsive_table_object.length-1) {
 			$(window).resize(function() {
-				if(!is_iOS || (is_iOS && (rtStartingOuterWidth !== window.outerWidth))) {
-					rtStartingOuterWidth = window.outerWidth; //MUST update the starting width so future orientation changes will be noticed
+				if(!is_iOS || (is_iOS && (rtStartingOuterWidth !== $(window).width()))) {
+					rtStartingOuterWidth = $(window).width(); //MUST update the starting width so future orientation changes will be noticed
 					fix_responsive_tables();
 					}
 				});
