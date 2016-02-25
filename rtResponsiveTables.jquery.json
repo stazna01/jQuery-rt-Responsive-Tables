@@ -6,7 +6,7 @@
 "responsive",
 "tables"
 ],
-"version": "1.0.3",
+"version": "1.0.4",
 "author": {
 "name": "Nathan Stazewski",
 "url": "https://github.com/stazna01/"
@@ -25,9 +25,4 @@
 ],
 "bugs": "https://github.com/stazna01/jQuery-rt-Responsive-Tables/issues",
 "homepage": "https://github.com/stazna01/jQuery-rt-Responsive-Tables",
-"docs": "https://github.com/stazna01/jQuery-rt-Responsive-Tables",
-"download": "https://github.com/stazna01/jQuery-rt-Responsive-Tables/archive/master.zip",
-"dependencies": {
-"jquery": ">=1.5"
-}
-}
+"docs": "https://gith

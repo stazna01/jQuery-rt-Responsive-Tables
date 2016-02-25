@@ -1,10 +1,10 @@
-/* jQuery rt Responsive Tables - v1.0.2 - 2014-07-07
+/* jQuery rt Responsive Tables - v1.0.4 - 2016-02-24
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
 * found at http://css-tricks.com/responsive-data-tables/
 *
-* Copyright (c) 2014 Nathan Stazewski; Licensed MIT */
+* Copyright (c) 2016 Nathan Stazewski; Licensed MIT */
 
 (function ( $ ) {
 $.fn.rtResponsiveTables = function( options ) {
@@ -24,7 +24,7 @@ $.fn.rtResponsiveTables = function( options ) {
 	function rt_write_css(rt_class_identifier) {
 		rt_css_code = '<style type="text/css">';
 		$(rt_class_identifier).find('th').each(function(index, element) {
-			rt_css_code += rt_class_identifier +'.rt-vertical-table td:nth-of-type('+(index+1)+'):before { content: "'+$(this).text()+'"; }';
+			rt_css_code += rt_class_identifier +'.rt-vertical-table td:nth-of-type('+(index+1)+'):before { content: "'+$(this).text().trim()+'"; }';
 			});
 		rt_css_code += '</style>';
 		$(rt_css_code).appendTo('head');
