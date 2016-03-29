@@ -1,4 +1,4 @@
-/* jQuery rt Responsive Tables - v1.0.4 - 2016-02-24
+/* jQuery rt Responsive Tables - v1.0.5 - 2016-03-28
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
@@ -43,7 +43,7 @@ $.fn.rtResponsiveTables = function( options ) {
 		return rt_table_width;
 		}
 	
-	function fix_responsive_tables() {
+	window.fix_responsive_tables = function() {
 		if ($("table.rt-responsive-table").length) {
 			
 			$("table.rt-responsive-table").each(function( index ) {
