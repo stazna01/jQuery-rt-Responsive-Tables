@@ -1,10 +1,10 @@
-/* jQuery rt Responsive Tables - v1.0.5 - 2016-03-28
+/* jQuery rt Responsive Tables - v1.0.6 - 2020-01-13
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
 * found at http://css-tricks.com/responsive-data-tables/
 *
-* Copyright (c) 2016 Nathan Stazewski; Licensed MIT */
+* Copyright (c) 2020 Nathan Stazewski; Licensed MIT */
 
 (function ( $ ) {
 $.fn.rtResponsiveTables = function( options ) {

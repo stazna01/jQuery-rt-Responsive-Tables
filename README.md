@@ -4,7 +4,7 @@ rt Responsive Tables is a jQuery plugin that takes tables utilizing "th" tags an
 
 This plugin is built heavily upon the work by Chris Coyier found at http://css-tricks.com/responsive-data-tables/. The reason for this plugin, though, is that his method requires changing CSS breakpoints and the CSS that names the table columns in vertical mode. For static tables this is not a problem, but I needed something that would always work, no matter how the content in the table cells and headers might change. Instead of using hard-coded CSS for the column names, and breakpoints for when the table will no longer fit, this plugin is dynamic. It writes custom CSS into the head of the page, and calculates when to make the table vertical and when it can fit horizontally.
 
-This plugin has been tested and works with modern versions of Chrome, Firefox, Safari, iOS, and Android. It works perfectly with IE9+ but older versions of IE won't show the vertical column names while in vertical mode (due to CSS limitations in IE8 and lower).
+This plugin has been tested and works with modern versions of Chrome, Firefox, Edge, Safari, iOS, and Android.
 
 ## Usage
 

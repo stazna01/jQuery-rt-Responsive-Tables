@@ -1,12 +1,12 @@
 @charset "UTF-8";
 /* CSS Document */
-/* jQuery rt Responsive Tables - v1.0.4 - 2016-02-24
+/* jQuery rt Responsive Tables - v1.0.6 - 2020-01-13
 * https://github.com/stazna01/jQuery-rt-Responsive-Tables
 *
 * This plugin is built heavily upon the work by Chris Coyier
 * found at http://css-tricks.com/responsive-data-tables/
 *
-* Copyright (c) 2016 Nathan Stazewski; Licensed MIT */
+* Copyright (c) 2020 Nathan Stazewski; Licensed MIT */
 
 /* 
 Generic Styling, for Desktops/Laptops 
@@ -59,17 +59,14 @@ table.rt-responsive-table.rt-vertical-table td {
 	border: none;
 	border-bottom: 1px solid #eee; 
 	position: relative;
-	padding-left: 50%; 
 }
 
 table.rt-responsive-table.rt-vertical-table td:before { 
 	/* Now like a table header */
-	position: absolute;
-	/* Top/left values mimic padding */
-	top: 6px;
-	left: 6px;
+	position: relative;
 	width: 45%; 
-	padding-right: 10px; 
-	white-space: nowrap;
+	padding-right: 10px;
 	font-weight: bold;
+	float:left;
+	word-break: break-all;
 }
