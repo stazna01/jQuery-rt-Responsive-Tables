@@ -85,6 +85,7 @@ $.fn.rtResponsiveTables = function( options ) {
 		
 	rt_responsive_table_object.each(function(index, element) {
 		$(this).addClass('rt-responsive-table-'+index).addClass('rt-responsive-table');
+		$(this).find('tbody > tr > td').wrapInner('<div class="responsive-container"></div>');
 		if (index == rt_responsive_table_object.length-1) {
 			$(window).resize(function() {
 				if(!is_iOS || (is_iOS && (rtStartingOuterWidth !== $(window).width()))) {
